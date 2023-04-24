@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Location } from "../components/HungrySnake/Location";
 import Ready from "../components/HungrySnake/Ready";
 import * as map from "../constant/HungrySnake";
+import { useHistory } from "react-router-dom"
 
 export default function HungrySnake() {
     const [locations, setLocations] = useState(map.map1)
@@ -152,10 +153,20 @@ export default function HungrySnake() {
         })
     }
 
+    var auEl = useRef()
+    var history = useHistory()
+
+    if (auEl.current) {
+        auEl.current.volume = 0.6
+        auEl.current.play()
+            .catch(er => { history.push('/games') }) //Fix the user didn't interact with the document first(EX when reload page)
+    }
+
     return (
         <div className='hungry-snake'>
             {ready ?
                 <div className='frame-map' onKeyDown={changeDirection} tabIndex="0">
+                    <audio ref={auEl} src={require('../sounds/hungrySnake/playGround.mp3')} />
                     {render()}
                     <audio ref={auEat} src={require('../sounds/hungrySnake/snakeEat.mp3')} />
                 </div> :
