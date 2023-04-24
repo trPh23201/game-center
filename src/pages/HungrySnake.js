@@ -157,7 +157,7 @@ export default function HungrySnake() {
             {ready ?
                 <div className='frame-map' onKeyDown={changeDirection} tabIndex="0">
                     {render()}
-                    <audio ref={auEat} src={require('../sounds/hungrySnake/snakeEat.mp3').default} />
+                    <audio ref={auEat} src={require('../sounds/hungrySnake/snakeEat.mp3')} />
                 </div> :
                 <div>
                     <div className='blackout'></div>

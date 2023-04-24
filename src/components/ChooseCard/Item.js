@@ -56,9 +56,9 @@ function Item(props) {
 
   return (
     <div className='col-sm-2'>
-      <audio ref={auEl} src={require('../../sounds/chooseCard/flipCard.mp3').default} />
-      <audio ref={auEl2} src={require('../../sounds/chooseCard/wrongChoose.mp3').default} />
-      <audio ref={auEl3} src={require('../../sounds/chooseCard/rightChoose.mp3').default} />
+      <audio ref={auEl} src={require('../../sounds/chooseCard/flipCard.mp3')} />
+      <audio ref={auEl2} src={require('../../sounds/chooseCard/wrongChoose.mp3')} />
+      <audio ref={auEl3} src={require('../../sounds/chooseCard/rightChoose.mp3')} />
       <div className={`item ${props.side}`} onClick={() => flip()} ref={diEl}>
         {props.side === 'back' ?
           <span className="glyphicon glyphicon-question-sign" aria-hidden="true"></span> :

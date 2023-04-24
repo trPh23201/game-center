@@ -29,7 +29,7 @@ export default function Ready(props) {
 
     return (
         <div className='ready'>
-            <audio ref={auEl} loop src={require('../../sounds/chooseCard/menu.mp3').default}></audio>
+            <audio ref={auEl} loop src={require('../../sounds/chooseCard/menu.mp3')}></audio>
             <p className={shadow}>Welcome to Choose Card game! <br />Choose difficult you want:</p>
             <div className='row'>
                 <div className='col-sm-4'>

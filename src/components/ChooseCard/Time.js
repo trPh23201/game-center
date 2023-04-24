@@ -31,7 +31,7 @@ export default function Time() {
 
     return (
         <div>
-            <audio ref={auEl} loop src={require('../../sounds/chooseCard/playGround.mp3').default}/>
+            <audio ref={auEl} loop src={require('../../sounds/chooseCard/playGround.mp3')}/>
             <h3 className='time'>Time: {min}:{sec < 10 ? `0${sec}` : sec}</h3>
         </div>
     )
