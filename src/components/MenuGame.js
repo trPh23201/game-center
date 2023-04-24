@@ -26,6 +26,7 @@ function MenuGame() {
     return (
         <div className="games container">
             <h1 className="heading" style={{ color: titleColor }}>Choose the game you want to play</h1>
+            <h3 style={{ color: 'yellow', textAlign: 'center' }}>Warning: LOUD music alert</h3>
             <div className="row">
                 <div className="col-sm-6">
                     <div className="body">

@@ -10,8 +10,9 @@ export default function Ready(props) {
     }, [shadow])
     return (
         <div className='ready'>
-            <p className={shadow}>Welcome to Hungry Snake game! <br />Choose game mode you want:</p>
+            <p className={shadow}>Welcome to Hungry Snake game! <br /></p>
             <button type="button" className="btn btn-lg" onClick={() => props.setReady(true)}>START</button>
+            <p>KEYBOARD: Press AWSD to play</p>
         </div>
     )
 }
