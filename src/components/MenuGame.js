@@ -35,7 +35,7 @@ function MenuGame() {
                 </div>
                 <div className="col-sm-6">
                     <div className="body">
-                        <GameLink label='HungrySnake' to={`${url}/HungrySnake`} />
+                        <GameLink label='HungrySnake (beta)' to={`${url}/HungrySnake`} />
                     </div>
                 </div>
             </div>

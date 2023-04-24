@@ -20,8 +20,8 @@ export default function Ready(props) {
         <div className='ready'>
             <audio ref={auEl} loop src={require('../../sounds/hungrySnake/menu.mp3')}></audio>
             <p className={shadow}>Welcome to Hungry Snake game! <br /></p>
+            <p>KEYBOARD: W,A,S,D to change direction or Dash</p>
             <button type="button" className="btn btn-lg" onClick={() => props.setReady(true)}>START</button>
-            <p>KEYBOARD: Press AWSD to play</p>
         </div>
     )
 }

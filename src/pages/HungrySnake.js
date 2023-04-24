@@ -106,9 +106,9 @@ export default function HungrySnake() {
             if (cloneMap[newLo.row][newLo.col] === 1 || (newLo.row === tailLo.row && newLo.col === tailLo.col))
                 safeMove(cloneMap, newLo, crLo)
             else if (cloneMap[newLo.row][newLo.col] === 4) eatFood(cloneMap, newLo, crLo)
-            else if (cloneMap[newLo.row][newLo.col] === 2) alert('lose')
+            else if (cloneMap[newLo.row][newLo.col] === 2) alert('Please turn around!')
         }, 500)
-        return () => { clearTimeout(timeOut); }
+        return () => { clearTimeout(timeOut) }
     }, [locations, direction, body, totalCol, totalRow, returnHeadLocation, eatFood, returnTailLocation, safeMove])
 
     //Player press W,A,S,D
